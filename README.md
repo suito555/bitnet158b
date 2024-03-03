@@ -2,7 +2,7 @@
 https://arxiv.org/abs/2310.11453<br>
 https://arxiv.org/abs/2402.17764<br>
 <br>
-このコードは以下の方々を参考にしています。<br>
+このコードは以下の方々のものを参考にしています。<br>
 <br>
 https://github.com/Beomi/BitNet-Transformers<br>
 https://github.com/frodo821/BitNet-Transformers<br>
