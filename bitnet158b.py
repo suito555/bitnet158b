@@ -31,6 +31,6 @@ class BitLinear158b(nn.Linear):
 
         matmal_weight = F.linear(quant_scaled_input, ternarized_weights, self.bias)
 
-        beta_gamma_dequant = abs_mean_W * abs_max_x / self.Q_b
-        output = matmal_weight * beta_gamma_dequant
+        beta_gamma = abs_mean_W * abs_max_x 
+        output = matmal_weight * beta_gamma / self.Q_b
         return output
