@@ -1,4 +1,4 @@
-論文に書かれていたbitnet158bの実装です。<br>
+論文に書かれていたbitnet1.58bの実装です。<br>
 https://arxiv.org/abs/2310.11453<br>
 https://arxiv.org/abs/2402.17764<br>
 <br>
