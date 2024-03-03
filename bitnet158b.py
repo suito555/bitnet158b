@@ -4,7 +4,7 @@ from torch.nn import functional as F
 
 class BitLinear158b(nn.Linear):
     def __init__(self, in_features, out_features, bias=False):
-        super(BitLinear, self).__init__(in_features, out_features, bias)
+        super(BitLinear158b, self).__init__(in_features, out_features, bias)
         self.bit_scale = 8
         self.Q_b = 2 ** (self.bit_scale - 1)
         self.eps = 1e-5
@@ -31,6 +31,6 @@ class BitLinear158b(nn.Linear):
 
         matmal_weight = F.linear(quant_scaled_input, ternarized_weights, self.bias)
 
-        beta_gamma = abs_mean_W * abs_max_x
-        output = matmal_weight * beta_gamma / self.Q_b
+        beta_gamma_dequant = abs_mean_W * abs_max_x / self.Q_b
+        output = matmal_weight * beta_gamma_dequant
         return output
