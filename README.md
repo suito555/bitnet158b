@@ -1,6 +1,3 @@
-<br>
-I'm a beginner at English and github.<br>
-<br>
 このコードは以下の方々を参考にしています。<br>
 https://arxiv.org/abs/2310.11453<br>
 https://arxiv.org/abs/2402.17764<br>
