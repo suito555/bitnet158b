@@ -8,7 +8,7 @@ https://github.com/frodo821/BitNet-Transformers<br>
 https://github.com/kyegomez/BitNet<br>
 <br>
 参考にさせてもらったコードから大きな変更点としては、activationの順番とdeqauntizeの部分を直しています。<br>
-また、Beomiさんのコードのllamaに追加してみたところ、lossは3.9付近でした。(epoch30000ほど)<br>
+また、Beomiさんのコードのllamaに追加してみたところ、lossは3.7付近でした。(epoch60000ほど)<br>
 何か問題があった場合は教えてください。<br>
 
 補足1:torch.compileとの戦い<br>
