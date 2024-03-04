@@ -12,8 +12,8 @@ https://github.com/kyegomez/BitNet<br>
 また、Beomiさんのコードのllamaに追加してみたところ、epoch60000でlossは3.7付近でした。<br>
 <br>
 <br>
-補足1:torch.compileとの戦い<br>
-どうやらtorch.compileはmatmal後に2の累乗以外をかけるとlossがnanになります。おそらく回避できないのと、原因がわかる方がいたら教えてください。<br>
+補足1:torch.compile<br>
+自作したGPTではtorch.compileはmatmal後に2の累乗以外をかけるとlossがnanになりました。しかしllamaだと問題なさそうです。<br>
 <br>
 補足2:モデルサイズと学習率について<br>
 モデルサイズを大きくするとともに、論文通りに、あるいはそれよりさらに学習率を下げたほうが良さそうです。(学習率高めだと結構シビア)<br>
