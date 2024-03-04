@@ -7,7 +7,7 @@ class BitLinear158b(nn.Linear):
         super(BitLinear158b, self).__init__(in_features, out_features, bias)
         self.bit_scale = 8
         self.Q_b = 2 ** (self.bit_scale - 1)
-        self.eps = 1e-5
+        self.eps = 1e-12
         
     def quantize_activations(self, input_norm, abs_max_x):
         scaled_x = torch.clamp(
