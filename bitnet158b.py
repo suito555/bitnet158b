@@ -18,6 +18,8 @@ class BitLinear158b(nn.Linear):
     def ternarize_weights(self,abs_mean_W):
         scaled_W = self.weight / (abs_mean_W + self.eps)
         quantize_weights = torch.sign(torch.clamp(scaled_W.round(), -1, 1))
+        #STE 
+        quantize_weights = (quantize_weights - self.weight).detach() + self.weight
         return quantize_weights
 
     def forward(self, input):
