@@ -23,10 +23,7 @@ line 893あたりの保存設定を変えればなんとかなりそうですが
 気が向いたらその部分にも挑戦します。<br>
 <br>
 補足4:epsの値<br>
-機械学習全般の話として、学習中のlossがnanになってしまうのを防ぐ方法の一つ、epsの値をpythonで調べました。参考にどうぞ。<br>
-fp16 1e-7 <= eps #1e-8 = 0<br>
-bf16 1e-40 <= eps  #1e-41 = 0<br>
-fp32 1e-45 <= eps  #1e-46 = 0<br>
+
 <br>
 <br>
 実験1:matmalの前でactivationとternizaed_weightのint8への変換<br>
