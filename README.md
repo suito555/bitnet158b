@@ -11,8 +11,8 @@ https://github.com/kyegomez/BitNet<br>
 また、Beomiさんのコードのllamaに追加してみたところ、epoch60000でlossは3.7付近でした。<br>
 <br>
 <br>
-実験1:int8への変換
-少し試してみましたが、matmal時に"addmm_cuda" not implemented for 'Char'となってしまうため実装できません。CPUで動かしてみましたが、あまりの遅さで実験できませんでした。仕方ないのでroundをして四捨五入してみましたが、メモリ使用量は変化ありませんでした。
+実験1:int8への変換<br>
+少し試してみましたが、matmal時に"addmm_cuda" not implemented for 'Char'となってしまうため実装できません。CPUで動かしてみましたが、あまりの遅さで実験できませんでした。仕方ないのでroundをして四捨五入してみましたが、メモリ使用量は変化ありませんでした。<br>
 補足1:torch.compile<br>
 自作したGPTではtorch.compileはmatmal後に2の累乗以外をかけるとlossがnanになりました。ところがllamaだと問題ないようです。<br>
 <br>
