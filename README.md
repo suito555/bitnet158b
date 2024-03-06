@@ -35,7 +35,7 @@ line 893あたりの保存設定を変えればなんとかなりそうですが
 ・clamp時のepsの効果がどうなるのかが自信がなかった<br>
 ・丸めた際に前と後ろの接続がどうなっているのか判断がつかなかった<br>
 ・そもそもの入力が分からず、結局matmul(int8,bit1.58)で何をしているのか分からなくなってしまった(int8を普通に越える)<br>
-3つ目が特に大きな理由で、実際にroundしてみたり、関係ないと思いつつSTEらしきことをしたのですが結果がまるで変わらなかったので外しています。<br>
+3つ目が特に大きな理由で、実際にroundしてみたり、関係ないと思いつつSTEらしきことをしたのですが結果がまるで変わらなかったので外しています。追記:Q_bを変えれば意味があったので実際にやってみたものを実験3に入れました。<br>
 <br>
 <br>
 実験1:matmulの前でactivationとternizaed_weightのint8への変換<br>
@@ -43,4 +43,22 @@ matmul時に"addmm_cuda" not implemented for 'Char'となってしまうため�
 <br>
 実験2:matmul時のactivationとternizaed_weightのbf16を四捨五入し整数にする<br>
 最適化に期待して、torch.roundによりbf16の値を四捨五入してみましたが、メモリ使用量に変化ありませんでした。<br>
-
+<br>
+実験3:roundの有無、Q_bの値の変化による検証<br>
+かなり早めのiterで取りました。個人的にはGPTの場合はlossの値がきれいなのでこれでも参考になると思います。気になる方は検証してみてください。今回はlossが9.0を割ったiterで止めています。(bf16,param=35.66M)<br>
+<br>
+activationにround無し<br>
+Q_b=32 iter 18: loss 8.9687<br>
+Q_b=16 iter 18: loss 8.9691<br>
+Q_b=8 iter 18: loss 8.9687<br>
+Q_b=4 iter 18: loss 8.9688<br>
+Q_b=2 iter 18: loss 8.9689<br>
+Q_b=1 iter 18: loss 8.9694<br>
+<br>
+activationにround追加<br>
+Q_b=32 iter 18: loss 8.9855<br>
+Q_b=16 iter 18: loss 8.9834<br>
+Q_b=8 iter 18: loss 8.9839<br>
+Q_b=4 iter 18: loss 8.9871<br>
+Q_b=2 iter 18: loss 9.0197<br>
+Q_b=1 iter 18: loss 9.3447<br>
