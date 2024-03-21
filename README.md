@@ -1,6 +1,7 @@
 論文に書かれていたBitNet1.58bのBitLinear部の実装です。<br>
 https://arxiv.org/abs/2310.11453<br>
 https://arxiv.org/abs/2402.17764<br>
+https://github.com/microsoft/unilm/tree/master/bitnet(テスト中)<br>
 <br>
 論文を読み自力で書いたところもありますが、以下の方々のコードが非常に参考になりました。<br>
 https://github.com/Beomi/BitNet-Transformers<br>
