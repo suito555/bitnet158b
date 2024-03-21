@@ -3,6 +3,16 @@ https://arxiv.org/abs/2310.11453<br>
 https://arxiv.org/abs/2402.17764<br>
 https://github.com/microsoft/unilm/tree/master/bitnet (テスト中)<br>
 <br>
+RMSNormは以下のものを参考にしました。<br>
+https://github.com/huggingface/transformers/blob/main/src/transformers/models/llama/modeling_llama.py<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+### 旧実装
+以下、公式実装が出ていないときの話です。(oldにそのファイルがあります)<br>
+<br>
 論文を読み自力で書いたところもありますが、以下の方々のコードが非常に参考になりました。<br>
 https://github.com/Beomi/BitNet-Transformers<br>
 https://github.com/frodo821/BitNet-Transformers<br>
