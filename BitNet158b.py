@@ -35,5 +35,5 @@ class BitLinear158b(nn.Linear):
         x_norm = self.rmsnorm(x)
         x_quant = x_norm + (self.activation_norm_quant(x_norm) - x_norm).detach()
         w_quant = w + (self.weight_quant(w) - w).detach()
-        output = F.linear(x_quant,w_quant,self.bias)
+        output = F.linear(x_quant,w_quant)
         return output
