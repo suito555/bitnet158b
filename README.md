@@ -13,8 +13,8 @@ However, I believe that this is not a problem because the 1.58-bit weights remai
 (translated by Gemini)<br>
 <br>
 test: 700M prameter<br>
-activation no round: iter4000 loss<3.5<br>
-activation round: now testing<br>
+activation no round: now testing<br>
+activation round: <br>
 ```python
  y = (x * scale).clamp(-128,127)
  #y = (x * scale).round().clamp(-128,127)
