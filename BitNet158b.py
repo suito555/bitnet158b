@@ -27,7 +27,7 @@ class BitLinear158b(nn.Linear):
     
     def weight_quant(self,w):
         scale = 1.0 / w.abs().mean().clamp(min=1e-5) #beta
-        u = (w * scale).round().clamp(-1,1)
+        u = (w * scale).round().clamp(-1,1) / scale
         return u
 
     def forward(self, x):
