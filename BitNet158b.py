@@ -22,7 +22,7 @@ class BitLinear158b(nn.Linear):
         
     def activation_norm_quant(self, x):
         scale = 127.0 / x.abs().max(dim=-1,keepdim=True).values.clamp(min=1e-5) #gamma
-        y = (x * scale).round().clamp(-128,127)
+        y = (x * scale).round().clamp(-128,127) / scale
         return y
     
     def weight_quant(self,w):
