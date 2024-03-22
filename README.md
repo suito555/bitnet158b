@@ -6,16 +6,13 @@ https://github.com/microsoft/unilm/tree/master/bitnet<br>
 The following code was used as a reference for the implementation of RMSNorm:<br>
 https://github.com/huggingface/transformers/blob/main/src/transformers/models/llama/modeling_llama.py<br>
 <br>
-This is a bitlinear implementation for the sole purpose of running the model. The following optimizations are currently not implemented:<br>
-・Offline weight computation<br>
-・Implementation of gemm_lowbit_kernel<br>
-However, I believe that this is not a problem because the 1.58-bit weights remain unchanged.<br>
-(translated by Gemini)<br>
+<br>
 <br>
 test: 700M prameter<br>
 now testing<br>
-
 <br>
+<br>
+(translated by Gemini)<br>
 <br>
 <br>
 <br>
