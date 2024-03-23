@@ -9,7 +9,7 @@ https://github.com/huggingface/transformers/blob/main/src/transformers/models/ll
 <br>
 <br>
 test: 700M prameter<br>
-now testing<br>
+step 8000: train loss 3.3350, val loss 3.1448<br>
 <br>
 <br>
 (translated by Gemini)<br>
