@@ -8,7 +8,7 @@ https://github.com/huggingface/transformers/blob/main/src/transformers/models/ll
 <br>
 <br>
 <br>
-test: 700M prameter<br>
+test: 700M prameter (my datasets)<br>
 step 8000: train loss 3.3350, val loss 3.1448<br>
 <br>
 <br>
