@@ -12,10 +12,3 @@ https://github.com/huggingface/transformers/blob/main/src/transformers/models/ll
 1. Replace all nn.linear in attention and swiGLU with BitLinear.
 2. Remove RMSNorm before attention and swiGLU because BitLinear has built-in RMSNorm.
 <br>
-<br>
-
-### 旧実装(old)
-公式実装が出ていないときに色々試行錯誤しましたが、無事動くBitLinearを作れたためコピーをローカルに残してgithub上からは削除しています。
-何か問題があればいつでも復元できるのでお伝えください。<br>
-<br>
-
